@@ -5,7 +5,7 @@ import DarkModeSwitcher from "react-native-dark-mode-switcher";
 const App = () => {
   const [switchValue, setSwitchValue] = React.useState(false);
 
-  const onChange = () => {
+  const onSwitchChange = () => {
     setSwitchValue((previousState: boolean) => !previousState);
   };
 
@@ -16,7 +16,7 @@ const App = () => {
       <DarkModeSwitcher
         size={70}
         value={switchValue}
-        onChange={() => onChange()}
+        onChange={() => onSwitchChange()}
       />
     </SafeAreaView>
   );
