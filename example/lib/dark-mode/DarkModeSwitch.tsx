@@ -27,6 +27,7 @@ interface IDarkModeSwitchProps {
   activeColor?: string;
   inactiveColor?: string;
   animationDuration?: number;
+  animationEasing?: (value: number) => number;
   onChange: (isActive: boolean) => void;
 }
 
@@ -37,6 +38,7 @@ const DarkModeSwitch: React.FC<IDarkModeSwitchProps> = ({
   animationDuration = 200,
   containerStyle,
   moonStyle,
+  animationEasing,
   knobStyle,
   activeColor = "#fff",
   inactiveColor = "#000",
@@ -49,6 +51,7 @@ const DarkModeSwitch: React.FC<IDarkModeSwitchProps> = ({
       Animated.timing(animationXAxis, {
         toValue: value ? size * 0.9 : 0,
         duration: animationDuration,
+        easing: animationEasing,
         useNativeDriver: false,
       }).start();
     },
@@ -56,7 +59,7 @@ const DarkModeSwitch: React.FC<IDarkModeSwitchProps> = ({
     [value],
   );
 
-  const backgroundColor: string = animationXAxis.interpolate({
+  const backgroundColor = animationXAxis.interpolate({
     inputRange: [0, 90],
     outputRange: [activeColor, inactiveColor],
   });

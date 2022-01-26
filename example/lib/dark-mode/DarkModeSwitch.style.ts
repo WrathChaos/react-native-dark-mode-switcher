@@ -2,7 +2,7 @@ import { ViewStyle, StyleSheet, Animated } from "react-native";
 
 export const _containerStyle = (
   size: number,
-  backgroundColor: string,
+  backgroundColor: any,
 ): ViewStyle => ({
   width: size * 1,
   height: size * 0.5,
@@ -18,7 +18,7 @@ export const _containerStyle = (
 export const _moonStyle = (
   animationXAxis: any,
   size: number,
-  backgroundColor: string,
+  backgroundColor: any,
 ): ViewStyle => ({
   position: "absolute",
   width: size * 0.4,
