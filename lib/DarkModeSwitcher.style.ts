@@ -45,8 +45,12 @@ export const _moonStyle = (
   }),
 });
 
-export const _knobStyle = (animationXAxis: any, size: number): ViewStyle => ({
-  right: 3,
+export const _knobStyle = (
+  animationXAxis: any,
+  size: number,
+  value: boolean,
+): ViewStyle => ({
+  right: value ? 3 : 0,
   width: size * 0.36,
   height: size * 0.36,
   backgroundColor: "#ffab40",

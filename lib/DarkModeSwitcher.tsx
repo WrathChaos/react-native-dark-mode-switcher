@@ -83,7 +83,7 @@ const DarkModeSwitcher: React.FC<IDarkModeSwitcherProps> = ({
             ]}
           />
           <Animated.View
-            style={[[_knobStyle(animationXAxis, size), knobStyle]]}
+            style={[[_knobStyle(animationXAxis, size, value), knobStyle]]}
           />
         </Animated.View>
       </TouchableWithoutFeedback>

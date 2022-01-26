@@ -5577,10 +5577,10 @@
     "jscodeshift" "^0.11.0"
     "nullthrows" "^1.1.1"
 
-"react-native-dark-mode-switcher@^0.1.0":
-  "integrity" "sha512-nshOuwIlzQUOBdveqWjz8X9B/GxtfI236X9uLjkAleG9kwRQSw8l16wHm8CPcSBoZ180RcyXCpA3vRjZw1cgGQ=="
-  "resolved" "https://registry.npmjs.org/react-native-dark-mode-switcher/-/react-native-dark-mode-switcher-0.1.0.tgz"
-  "version" "0.1.0"
+"react-native-dark-mode-switcher@^0.1.1":
+  "integrity" "sha512-m+qswbeia/xsUVVy0lyiRr6hH1p+nxQCYb2VHhxXBshBg2vfdVskx+1M7jLci4hKb8tcvAWflaUvLDHP0mh8Uw=="
+  "resolved" "https://registry.npmjs.org/react-native-dark-mode-switcher/-/react-native-dark-mode-switcher-0.1.1.tgz"
+  "version" "0.1.1"
 
 "react-native@*", "react-native@0.66.4":
   "integrity" "sha512-9vx5dlSfQlKbbDtr8+xMon6qsmSu7jvjdXWZpEKh3XVKpUidbbODv7048gwVKX8YAel1egeR7hN8vzSeI6ssTw=="
