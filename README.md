@@ -83,6 +83,10 @@ should work of the example project.
 - [x] ~~LICENSE~~
 - [ ] Write an article about the lib on Medium
 
+## Credits
+
+Heavily inspired by [Vijaydemonz's React Native Animated Switch NPM](https://github.com/vijaydemonz/react-native-animated-switch-npm)
+
 ## Author
 
 FreakyCoder, kurayogun@gmail.com
