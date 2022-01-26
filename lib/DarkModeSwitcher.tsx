@@ -3,7 +3,6 @@ import {
   Animated,
   StyleProp,
   ViewStyle,
-  Easing,
   TouchableWithoutFeedback,
 } from "react-native";
 /**
@@ -13,11 +12,11 @@ import styles, {
   _containerStyle,
   _knobStyle,
   _moonStyle,
-} from "./DarkModeSwitch.style";
+} from "./DarkModeSwitcher.style";
 
 type CustomStyleProp = StyleProp<ViewStyle> | Array<StyleProp<ViewStyle>>;
 
-interface IDarkModeSwitchProps {
+interface IDarkModeSwitcherProps {
   style?: CustomStyleProp;
   containerStyle?: CustomStyleProp;
   moonStyle?: CustomStyleProp;
@@ -28,13 +27,13 @@ interface IDarkModeSwitchProps {
   inactiveColor?: string;
   animationDuration?: number;
   animationEasing?: (value: number) => number;
-  onChange: (isActive: boolean) => void;
+  onChange: () => void;
 }
 
-const DarkModeSwitch: React.FC<IDarkModeSwitchProps> = ({
+const DarkModeSwitcher: React.FC<IDarkModeSwitcherProps> = ({
   style,
-  size = 100,
   value,
+  size = 100,
   animationDuration = 200,
   containerStyle,
   moonStyle,
@@ -72,7 +71,7 @@ const DarkModeSwitch: React.FC<IDarkModeSwitchProps> = ({
     <>
       <TouchableWithoutFeedback
         style={[styles.container, style]}
-        onPress={() => onChange(true)}
+        onPress={onChange}
       >
         <Animated.View
           style={[_containerStyle(size, backgroundColor), containerStyle]}
@@ -92,4 +91,4 @@ const DarkModeSwitch: React.FC<IDarkModeSwitchProps> = ({
   );
 };
 
-export default DarkModeSwitch;
+export default DarkModeSwitcher;

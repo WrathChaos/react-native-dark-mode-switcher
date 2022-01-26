@@ -1,19 +1,19 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
-import { DarkModeSwitch } from "./lib/index";
+import DarkModeSwitcher from "react-native-dark-mode-switcher";
 
 const App = () => {
-  const [isOn, setIsOn] = React.useState(false);
+  const [switchValue, setSwitchValue] = React.useState(false);
 
   const onChange = () => {
-    setIsOn((d) => !d);
+    setSwitchValue((previousState: boolean) => !previousState);
   };
 
   return (
     <SafeAreaView
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
     >
-      <DarkModeSwitch value={isOn} onChange={() => onChange()} />
+      <DarkModeSwitcher value={switchValue} onChange={() => onChange()} />
     </SafeAreaView>
   );
 };
