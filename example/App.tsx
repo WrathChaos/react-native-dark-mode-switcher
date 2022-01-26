@@ -13,7 +13,11 @@ const App = () => {
     <SafeAreaView
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
     >
-      <DarkModeSwitcher value={switchValue} onChange={() => onChange()} />
+      <DarkModeSwitcher
+        size={70}
+        value={switchValue}
+        onChange={() => onChange()}
+      />
     </SafeAreaView>
   );
 };

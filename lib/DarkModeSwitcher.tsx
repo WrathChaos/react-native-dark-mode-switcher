@@ -59,7 +59,7 @@ const DarkModeSwitcher: React.FC<IDarkModeSwitcherProps> = ({
   );
 
   const backgroundColor = animationXAxis.interpolate({
-    inputRange: [0, 90],
+    inputRange: [0, 50],
     outputRange: [activeColor, inactiveColor],
   });
 

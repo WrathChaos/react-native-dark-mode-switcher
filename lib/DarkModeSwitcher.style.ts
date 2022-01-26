@@ -1,4 +1,4 @@
-import { ViewStyle, StyleSheet, Animated } from "react-native";
+import { ViewStyle, StyleSheet } from "react-native";
 
 export const _containerStyle = (
   size: number,
@@ -25,8 +25,8 @@ export const _moonStyle = (
   height: size * 0.25,
   zIndex: 10,
   top: size * 0.09,
-  marginLeft: size * -0.45,
-  borderBottomLeftRadius: size * 0.2,
+  marginLeft: size * -0.5,
+  borderBottomLeftRadius: size * 0.25,
   borderBottomRightRadius: size * 0.2,
   borderTopRightRadius: size * 0.05,
   backgroundColor: backgroundColor,
@@ -45,7 +45,12 @@ export const _moonStyle = (
   }),
 });
 
-export const _knobStyle = (animationXAxis: Animated.Value, size: number) => ({
+export const _knobStyle = (animationXAxis: any, size: number): ViewStyle => ({
+  right: 3,
+  width: size * 0.36,
+  height: size * 0.36,
+  backgroundColor: "#ffab40",
+  borderRadius: size * 0.18,
   transform: [
     {
       translateX: animationXAxis.interpolate({
@@ -54,16 +59,8 @@ export const _knobStyle = (animationXAxis: Animated.Value, size: number) => ({
       }),
     },
   ],
-  width: size * 0.36,
-  height: size * 0.36,
-  backgroundColor: "#ffab40",
-  borderRadius: size * 0.18,
 });
 
-interface Style {
-  container: ViewStyle;
-}
-
-export default StyleSheet.create<Style>({
+export default StyleSheet.create({
   container: {},
 });
